@@ -2,203 +2,144 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Allison — Guitarrista | Economic Raped</title>
+  <title>Economic Raped</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #0d0d0d;
+      background: #0b0b0b;
       color: #eaeaea;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
     }
 
-    /* =======================
-       VERMELHO SANGUE
-    ======================== */
-    :root {
-      --blood-red: #8b0000;
-    }
-
-    /* =======================
-       GIF EXTREMA ESQUERDA
-    ======================== */
-    .left-gif {
+    /* ===== HEADER ===== */
+    header {
       position: fixed;
+      top: 0;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 140px;
-      opacity: 0.85;
-      z-index: 5;
-      pointer-events: none;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
     }
 
-    /* =======================
-       INTEGRANTES (FIXO ESQUERDA)
-    ======================== */
-    .members {
-      position: fixed;
-      left: 160px; /* afastado do GIF */
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 22px;
-      line-height: 2;
-      color: var(--blood-red);
-      z-index: 10;
+    .logo {
+      height: 65px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .members h2 {
-      font-size: 24px;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .member {
-      display: block;
-      transition: transform 0.25s ease;
-    }
-
-    .member:hover {
-      transform: scale(1.15);
-    }
-
-    /* Allison destacado */
-    .member.allison {
-      font-size: 32px;
-      font-weight: 700;
-      transform: none;
-    }
-
-    .member.allison:hover {
-      transform: none;
-      cursor: default;
-    }
-
-    /* =======================
-       CONTEÚDO SCROLLÁVEL
-    ======================== */
-    .content {
+    /* ===== MAIN ===== */
+    main {
+      padding-top: 140px;
       max-width: 900px;
-      margin: 0 auto;
-      padding: 120px 40px 220px;
-      min-height: 200vh;
+      margin-left: 80px;
     }
 
-    /* =======================
-       TÍTULO TOPO
-    ======================== */
-    .role-title {
-      text-align: center;
-      font-size: 14px;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      color: var(--blood-red);
-      margin-bottom: 40px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    /* =======================
-       TEXTO CENTRAL
-    ======================== */
-    .about {
-      text-align: center;
-      font-size: 24px;
-      line-height: 1.9;
-      color: #cfcfcf;
+    .red {
+      color: #8b0000; /* vermelho sangue */
     }
 
-    .about strong {
-      color: #ffffff;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    .divider {
-      width: 140px;
-      height: 2px;
-      background: var(--blood-red);
-      margin: 60px auto;
+    .english {
+      opacity: 0.85;
+      font-style: italic;
     }
 
-    .about.en {
-      font-size: 20px;
-      color: #9a9a9a;
+    /* ===== GUITARRA ===== */
+    .guitar-container {
+      position: fixed;
+      top: 120px;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 200;
+    }
+
+    .guitar {
+      width: 100%;
+      transition: transform 0.1s linear;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- GIF ESQUERDA -->
-  <img 
-    src="Guitarra.webp"
-    alt="Guitarra"
-    class="left-gif"
-  >
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" id="logo">
+  </header>
 
-  <!-- INTEGRANTES -->
-  <div class="members">
-    <h2>Integrantes</h2>
-    <span class="member">Ana — Vocal</span>
-    <span class="member allison">Allison — Guitarra</span>
-    <span class="member">Ciclano — Baixo</span>
-    <span class="member">Taigo — Bateria</span>
+  <main>
+    <h1><span class="red">Economic</span> Raped</h1>
+
+    <p>
+      Projeto artístico idealizado por <span class="red">Allison</span>, guitarrista
+      da capital de <span class="red">São Paulo</span>, explorando extremos sonoros,
+      identidade, brutalidade e técnica musical.
+    </p>
+
+    <p class="english">
+      Artistic project created by <span class="red">Allison</span>, a guitarist from
+      <span class="red">SP, Brazil</span>, exploring sonic extremes, identity,
+      brutality, and musical technique.
+    </p>
+
+    <!-- Conteúdo extra só pra permitir scroll -->
+    <p>
+      A estética do projeto se baseia em contraste, peso e intensidade.
+      Não há compromisso com agradar — apenas com expressão.
+    </p>
+
+    <p class="english">
+      The project’s aesthetic is built on contrast, weight, and intensity.
+      There is no commitment to pleasing — only to expression.
+    </p>
+
+    <p style="margin-bottom: 800px;"></p>
+  </main>
+
+  <!-- GUITARRA -->
+  <div class="guitar-container">
+    <img src="Guitarra.webp" alt="Guitar" class="guitar" id="guitar">
   </div>
 
-  <!-- CONTEÚDO -->
-  <div class="content">
+  <script>
+    const logo = document.getElementById("logo");
+    const guitar = document.getElementById("guitar");
 
-    <div class="role-title">Guitarrista</div>
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
 
-    <!-- TEXTO PT -->
-    <div class="about">
-      <p>
-        <strong>Allison</strong>, também conhecido como <strong>Vild</strong>,
-        é um guitarrista natural da <strong>capital de São Paulo</strong>,
-        com bases sólidas no <strong>neoclassicismo</strong> e no
-        <strong>death metal técnico</strong>.
-        Sua linguagem musical é marcada pela busca constante entre
-        precisão extrema, complexidade harmônica e expressão emocional.
-      </p>
+      /* Logo */
+      const scale = Math.max(0.7, 1 - scrollY / 600);
+      const opacity = Math.max(0.4, 1 - scrollY / 400);
+      logo.style.transform = `scale(${scale})`;
+      logo.style.opacity = opacity;
 
-      <p>
-        A criação da banda ao lado de <strong>Taigo</strong> surgiu a partir da
-        percepção de que não existia um verdadeiro meio-termo entre a
-        <strong>tecnicidade e a expressividade</strong> do neoclassicismo e do
-        death metal técnico com a <strong>emoção crua do emo</strong>.
-      </p>
-
-      <p>
-        Essa fusão entre brutalidade, virtuosismo e sentimento se tornou
-        o eixo central da identidade artística da banda.
-      </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- TEXTO EN -->
-    <div class="about en">
-      <p>
-        <strong>Allison</strong>, also known as <strong>Vild</strong>, is a guitarist
-        from <strong>SP, Brazil</strong>, with strong foundations in
-        <strong>neoclassical metal</strong> and
-        <strong>technical death metal</strong>.
-        His musical language is driven by the balance between extreme precision,
-        harmonic complexity, and emotional expression.
-      </p>
-
-      <p>
-        The band was formed alongside <strong>Taigo</strong> from the realization
-        that there was no true middle ground between the
-        <strong>technical and expressive depth</strong> of neoclassicism and
-        technical death metal, and the <strong>emotional intensity of emo</strong>.
-      </p>
-
-      <p>
-        This contrast between brutality, virtuosity, and emotion became
-        the core foundation of the band’s artistic identity.
-      </p>
-    </div>
-
-  </div>
+      /* Guitarra scrollável */
+      guitar.style.transform = `translateY(${scrollY * 0.3}px)`;
+    });
+  </script>
 
 </body>
 </html>
