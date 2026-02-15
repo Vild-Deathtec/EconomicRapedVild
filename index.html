@@ -20,11 +20,25 @@
     }
 
     /* =======================
+       GIF EXTREMA ESQUERDA
+    ======================== */
+    .left-gif {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 140px;
+      opacity: 0.85;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    /* =======================
        INTEGRANTES (FIXO ESQUERDA)
     ======================== */
     .members {
       position: fixed;
-      left: 60px;
+      left: 160px; /* afastado do GIF */
       top: 50%;
       transform: translateY(-50%);
       font-size: 22px;
@@ -104,16 +118,21 @@
       margin: 60px auto;
     }
 
-    /* Texto em inglês */
     .about.en {
       font-size: 20px;
       color: #9a9a9a;
     }
-
   </style>
 </head>
 
 <body>
+
+  <!-- GIF ESQUERDA -->
+  <img 
+    src="Guitarra.webp"
+    alt="Guitarra"
+    class="left-gif"
+  >
 
   <!-- INTEGRANTES -->
   <div class="members">
@@ -183,4 +202,3 @@
 
 </body>
 </html>
-
