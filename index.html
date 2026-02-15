@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Allison — Guitarrista | Economic Raped</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: #eaeaea;
+      font-family: Arial, sans-serif;
+    }
+
+    /* =======================
+       VERMELHO SANGUE
+    ======================== */
+    :root {
+      --blood-red: #8b0000;
+    }
+
+    /* =======================
+       INTEGRANTES (FIXO ESQUERDA)
+    ======================== */
+    .members {
+      position: fixed;
+      left: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      line-height: 2;
+      color: var(--blood-red);
+      z-index: 10;
+    }
+
+    .members h2 {
+      font-size: 24px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .member {
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .member:hover {
+      transform: scale(1.15);
+    }
+
+    /* Allison destacado */
+    .member.allison {
+      font-size: 32px;
+      font-weight: 700;
+      transform: none;
+    }
+
+    .member.allison:hover {
+      transform: none;
+      cursor: default;
+    }
+
+    /* =======================
+       CONTEÚDO SCROLLÁVEL
+    ======================== */
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 40px 220px;
+      min-height: 200vh;
+    }
+
+    /* =======================
+       TÍTULO TOPO
+    ======================== */
+    .role-title {
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--blood-red);
+      margin-bottom: 40px;
+    }
+
+    /* =======================
+       TEXTO CENTRAL
+    ======================== */
+    .about {
+      text-align: center;
+      font-size: 24px;
+      line-height: 1.9;
+      color: #cfcfcf;
+    }
+
+    .about strong {
+      color: #ffffff;
+    }
+
+    .divider {
+      width: 140px;
+      height: 2px;
+      background: var(--blood-red);
+      margin: 60px auto;
+    }
+
+    /* Texto em inglês */
+    .about.en {
+      font-size: 20px;
+      color: #9a9a9a;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- INTEGRANTES -->
+  <div class="members">
+    <h2>Integrantes</h2>
+    <span class="member">Ana — Vocal</span>
+    <span class="member allison">Allison — Guitarra</span>
+    <span class="member">Ciclano — Baixo</span>
+    <span class="member">Taigo — Bateria</span>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="content">
+
+    <div class="role-title">Guitarrista</div>
+
+    <!-- TEXTO PT -->
+    <div class="about">
+      <p>
+        <strong>Allison</strong>, também conhecido como <strong>Vild</strong>,
+        é um guitarrista natural da <strong>capital de São Paulo</strong>,
+        com bases sólidas no <strong>neoclassicismo</strong> e no
+        <strong>death metal técnico</strong>.
+        Sua linguagem musical é marcada pela busca constante entre
+        precisão extrema, complexidade harmônica e expressão emocional.
+      </p>
+
+      <p>
+        A criação da banda ao lado de <strong>Taigo</strong> surgiu a partir da
+        percepção de que não existia um verdadeiro meio-termo entre a
+        <strong>tecnicidade e a expressividade</strong> do neoclassicismo e do
+        death metal técnico com a <strong>emoção crua do emo</strong>.
+      </p>
+
+      <p>
+        Essa fusão entre brutalidade, virtuosismo e sentimento se tornou
+        o eixo central da identidade artística da banda.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- TEXTO EN -->
+    <div class="about en">
+      <p>
+        <strong>Allison</strong>, also known as <strong>Vild</strong>, is a guitarist
+        from <strong>SP, Brazil</strong>, with strong foundations in
+        <strong>neoclassical metal</strong> and
+        <strong>technical death metal</strong>.
+        His musical language is driven by the balance between extreme precision,
+        harmonic complexity, and emotional expression.
+      </p>
+
+      <p>
+        The band was formed alongside <strong>Taigo</strong> from the realization
+        that there was no true middle ground between the
+        <strong>technical and expressive depth</strong> of neoclassicism and
+        technical death metal, and the <strong>emotional intensity of emo</strong>.
+      </p>
+
+      <p>
+        This contrast between brutality, virtuosity, and emotion became
+        the core foundation of the band’s artistic identity.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
 
